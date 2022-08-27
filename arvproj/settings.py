@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(1#td3__3a!b#ds6b&xmy9_4w($+(-+a_%zemm9*k_sj7e_se='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -115,10 +115,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+import os
 STATIC_URL = 'static/'
+STATIC_ROOT= os.path.join(BASE_DIR,'/staticfiles/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
+ALLOWED_HOSTS = ['fd-oxxa.apps.ir-thr-at1.arvan.run/','127.0.0.1']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
